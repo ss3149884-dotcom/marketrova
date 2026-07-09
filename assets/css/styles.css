@@ -717,9 +717,9 @@ button {
 }
 
 .hero-title-v2 {
-  max-width: 12.8ch;
-  font-size: clamp(3.6rem, 6.7vw, 7.2rem);
-  line-height: 0.9;
+  max-width: 16ch;
+  font-size: clamp(3.2rem, 5.2vw, 5.8rem);
+  line-height: 0.95;
 }
 
 .hero-copy-v2 {
