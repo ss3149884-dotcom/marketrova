@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Marketrova">
+  <defs>
+    <linearGradient id="g" x1="10" y1="8" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1167ff"/>
+      <stop offset="1" stop-color="#18d6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#f8fbff"/>
+  <path d="M14 46V18h8l10 14 10-14h8v28h-8V31L34 42h-4L22 31v15h-8z" fill="url(#g)"/>
+</svg>
