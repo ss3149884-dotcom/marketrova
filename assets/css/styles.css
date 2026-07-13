@@ -422,6 +422,7 @@ button {
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
+  overflow: visible;
 }
 
 .word-reveal span {
