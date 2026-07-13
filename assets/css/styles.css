@@ -422,7 +422,6 @@ button {
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  overflow: visible;
 }
 
 .word-reveal span {
@@ -714,8 +713,8 @@ button {
 
 .hero-grid-v2{
     grid-template-columns:
-        minmax(0,1fr)
-    minmax(560px,680px);
+    minmax(36rem,1.15fr)
+    minmax(28rem,0.85fr);
 
     align-items:center;
     gap:clamp(2rem,3vw,4rem);
