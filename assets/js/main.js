@@ -144,7 +144,6 @@
   }
 
   function initHomeData() {
-    alert("THIS IS MY MAIN.JS");
     const data = window.MARKETROVA_DATA || {};
     const services = data.services || [];
     const serviceTiles = document.querySelectorAll("[data-service-list] .service-tile");
