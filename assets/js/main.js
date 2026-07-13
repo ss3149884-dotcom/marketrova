@@ -144,9 +144,14 @@
   }
 
   function initHomeData() {
+    alert("THIS IS MY MAIN.JS");
     const data = window.MARKETROVA_DATA || {};
     const services = data.services || [];
     const serviceTiles = document.querySelectorAll("[data-service-list] .service-tile");
+
+    console.log("Services:", services);
+console.log("Tiles:", serviceTiles);
+console.log("First title before:", serviceTiles[0]?.querySelector("h3")?.textContent);
 
     serviceTiles.forEach((tile, index) => {
       const service = services[index];
