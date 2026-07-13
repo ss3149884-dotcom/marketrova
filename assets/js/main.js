@@ -162,24 +162,22 @@
   }
 
   function initHeroSystem() {
-    const system = document.querySelector("[data-growth-system]");
-    const stage = document.querySelector("[data-growth-stage]");
+    const stage = document.querySelector("[data-hero-scene]");
+    const system = stage ? stage.querySelector(".growth-map") : null;
     if (!system || !stage || prefersReducedMotion) return;
 
     let targetX = 0;
     let targetY = 0;
     let currentX = 0;
     let currentY = 0;
-    let active = true;
     let visible = true;
 
     const setFromPointer = (event) => {
       const rect = stage.getBoundingClientRect();
       const px = (event.clientX - rect.left) / rect.width - 0.5;
       const py = (event.clientY - rect.top) / rect.height - 0.5;
-      targetY = px * 14;
-      targetX = py * -10;
-      active = true;
+      targetY = px * 10;
+      targetX = py * -8;
     };
 
     const reset = () => {
@@ -204,7 +202,7 @@
     const tick = () => {
       if (visible) {
         const rect = stage.getBoundingClientRect();
-        const scrollInfluence = Math.max(-8, Math.min((window.innerHeight * 0.5 - rect.top) / 60, 10));
+        const scrollInfluence = Math.max(-5, Math.min((window.innerHeight * 0.5 - rect.top) / 80, 7));
         currentX += (targetX + scrollInfluence - currentX) * 0.08;
         currentY += (targetY - currentY) * 0.08;
         system.style.setProperty("--rx", `${currentX.toFixed(2)}deg`);
@@ -213,7 +211,7 @@
       requestAnimationFrame(tick);
     };
 
-    if (active || canHover || window.innerWidth > 700) tick();
+    tick();
   }
 
   function initSystemSteps() {
