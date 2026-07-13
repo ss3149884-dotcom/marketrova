@@ -1,48 +1,48 @@
 window.MARKETROVA_DATA = {
-  services: [
-    {
-      id: "service-placeholder-01",
-      title: "Service Placeholder 01",
-      category: "Strategy Layer",
-      summary: "Editable service placeholder. Replace with the final Marketrova service.",
-      shape: "core"
-    },
-    {
-      id: "service-placeholder-02",
-      title: "Service Placeholder 02",
-      category: "Website Layer",
-      summary: "Editable service placeholder. Replace with the final Marketrova service.",
-      shape: "orbit"
-    },
-    {
-      id: "service-placeholder-03",
-      title: "Service Placeholder 03",
-      category: "Marketing Layer",
-      summary: "Editable service placeholder. Replace with the final Marketrova service.",
-      shape: "pulse"
-    },
-    {
-      id: "service-placeholder-04",
-      title: "Service Placeholder 04",
-      category: "Content Layer",
-      summary: "Editable service placeholder. Replace with the final Marketrova service.",
-      shape: "signal"
-    },
-    {
-      id: "service-placeholder-05",
-      title: "Service Placeholder 05",
-      category: "Analytics Layer",
-      summary: "Editable service placeholder. Replace with the final Marketrova service.",
-      shape: "grid"
-    },
-    {
-      id: "service-placeholder-06",
-      title: "Service Placeholder 06",
-      category: "Optimization Layer",
-      summary: "Editable service placeholder. Replace with the final Marketrova service.",
-      shape: "scale"
-    }
-  ],
+ services: [
+  {
+    id: "website-development",
+    title: "Website Development",
+    category: "Development",
+    summary: "Responsive, SEO-friendly websites built for speed, performance and business growth.",
+    shape: "core"
+  },
+  {
+    id: "no-code-app-development",
+    title: "No-Code App Development",
+    category: "Development",
+    summary: "Launch powerful web and mobile apps faster using modern no-code platforms.",
+    shape: "orbit"
+  },
+  {
+    id: "digital-marketing",
+    title: "Digital Marketing",
+    category: "Marketing",
+    summary: "Data-driven marketing strategies that help businesses generate leads and increase revenue.",
+    shape: "pulse"
+  },
+  {
+    id: "media-buying",
+    title: "Media Buying",
+    category: "Advertising",
+    summary: "Google Ads, Meta Ads and paid campaigns optimized for maximum ROI.",
+    shape: "signal"
+  },
+  {
+    id: "saas-solutions",
+    title: "SaaS Solutions",
+    category: "Software",
+    summary: "Custom SaaS products, automation systems and scalable cloud-based solutions.",
+    shape: "grid"
+  },
+  {
+    id: "business-analysis",
+    title: "Business Analysis",
+    category: "Consulting",
+    summary: "Identify opportunities, optimize processes and build strategies for sustainable growth.",
+    shape: "scale"
+  }
+],
   portfolio: [
     {
       id: "project-placeholder-01",
