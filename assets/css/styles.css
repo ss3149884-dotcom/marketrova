@@ -615,7 +615,7 @@ button {
 }
 
 .node-strategy {
-  --x: -14%;
+  --x: -0%;
   --y: -38%;
   --z: 155px;
   --tilt-x: 12deg;
@@ -823,10 +823,12 @@ button {
 .story-copy p,
 .system-sticky-copy p,
 .final-cta p {
-  max-width: 46rem;
-  color: var(--muted);
-  font-size: 1.06rem;
-  line-height: 1.75;
+
+    max-width: 100%;
+    width: 100%;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.9;
 }
 
 .story-section,

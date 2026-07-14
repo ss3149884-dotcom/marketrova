@@ -285,3 +285,31 @@ console.log("First title before:", serviceTiles[0]?.querySelector("h3")?.textCon
 
   doc.classList.add("js-ready");
 })();
+
+const stage = document.querySelector(".growth-stage");
+
+if(stage){
+
+stage.addEventListener("mousemove",(e)=>{
+
+const rect = stage.getBoundingClientRect();
+
+const x = (e.clientX-rect.left)/rect.width-.5;
+
+const y = (e.clientY-rect.top)/rect.height-.5;
+
+stage.style.transform=
+`perspective(1200px)
+rotateY(${x*10}deg)
+rotateX(${-y*10}deg)`;
+
+});
+
+stage.addEventListener("mouseleave",()=>{
+
+stage.style.transform=
+"perspective(1200px) rotateX(0deg) rotateY(0deg)";
+
+});
+
+}
