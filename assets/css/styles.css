@@ -1194,16 +1194,27 @@ button {
 }
 
 .project-media {
-  min-height: 20rem;
-  display: grid;
-  place-items: center;
-  border-radius: 22px;
-  background:
-    linear-gradient(135deg, rgba(17, 103, 255, 0.13), rgba(24, 214, 255, 0.22)),
-    repeating-linear-gradient(90deg, rgba(7, 27, 54, 0.08) 0 1px, transparent 1px 42px);
-  color: #31506f;
-  font-weight: 950;
+    min-height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #eef5ff;
 }
+
+.project-media img {
+    width: 95%;      /* 80%, 85%, 90% try kar sakte ho */
+    height: 95%;
+    object-fit: contain;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.project-frame:hover .project-media img {
+    transform: scale(1.03);
+}
+
 
 .project-info {
   align-self: center;
