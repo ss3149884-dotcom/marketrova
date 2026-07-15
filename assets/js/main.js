@@ -342,20 +342,23 @@ if (contactForm) {
         body: JSON.stringify(data)
       });
 
-      const result = await response.json();
+      const result = await response.text();
 
-      if (result.success) {
-        alert("Message sent successfully!");
-        contactForm.reset();
-      } else {
-        alert(result.error || "Failed to send message.");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Something went wrong.");
-    }
+if (response.ok) {
+  alert("Message sent successfully!");
+  contactForm.reset();
+} else {
+  console.log(result);
+  alert("Failed to send message.");
+}
+}
 
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = oldText;
-  });
+catch (error) {
+  console.error(error);
+  alert("Something went wrong.");
+}
+
+submitBtn.disabled = false;
+submitBtn.innerHTML = oldText;
+});
 }
