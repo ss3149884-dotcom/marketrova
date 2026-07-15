@@ -107,27 +107,31 @@
         24 hours.
       </p>
 
-      <form>
+      <form id="contactForm">
 
         <div class="grid-2">
 
           <input
-          type="text"
-          placeholder="Your Name">
+type="text"
+name="name"
+placeholder="Your Name"
+required>
 
           <input
-          type="email"
-          placeholder="Email Address">
-
+type="email"
+name="email"
+placeholder="Email Address"
+required>
         </div>
 
         <div class="grid-2">
 
           <input
-          type="text"
-          placeholder="Company">
+type="text"
+name="company"
+placeholder="Company">
 
-          <select>
+          <select name="budget">
 
             <option>Project Budget</option>
             <option>$500 - $2,000</option>
@@ -139,10 +143,12 @@
         </div>
 
         <textarea
-        rows="6"
-        placeholder="Tell us about your project..."></textarea>
+name="message"
+rows="6"
+placeholder="Tell us about your project..."
+required></textarea>
 
-        <button class="btn btn-primary">
+        <button type="submit" class="btn btn-primary">
 
           Send Project →
 

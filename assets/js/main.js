@@ -313,3 +313,49 @@ stage.style.transform=
 });
 
 }
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const oldText = submitBtn.innerHTML;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "Sending...";
+
+    const data = {
+      name: contactForm.name.value,
+      email: contactForm.email.value,
+      company: contactForm.company.value,
+      budget: contactForm.budget.value,
+      message: contactForm.message.value
+    };
+
+    try {
+      const response = await fetch("https://marketrova-contact.bettermoneysaving.workers.dev/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert("Message sent successfully!");
+        contactForm.reset();
+      } else {
+        alert(result.error || "Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong.");
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = oldText;
+  });
+}
